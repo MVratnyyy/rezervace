@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervační systém</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Rezervační systém</h2>
+
+        <div class="mb-4">
+            <label for="date" class="block text-sm font-medium text-gray-600">Vyberte datum:</label>
+            <input type="date" id="date" class="mt-1 p-2 border rounded-md" required>
+        </div>
+
+        <div class="mb-4">
+            <label for="time" class="block text-sm font-medium text-gray-600">Vyberte hodinu:</label>
+            <select id="time" class="mt-1 p-2 border rounded-md" required>
+                <!-- Možné hodiny -->
+                <option value="9:00">9:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <!-- ... další hodiny ... -->
+            </select>
+        </div>
+
+        <button id="reserveBtn" class="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">Potvrdit rezervaci</button>
+
+        <!-- Moje rezervace -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-bold mb-4">Moje rezervace</h2>
+            <ul id="myReservations" class="list-disc pl-6">
+                <!-- Seznam rezervací bude zobrazen zde -->
+            </ul>
+        </div>
+
+        <!-- Editace rezervace -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-bold mb-4">Upravit rezervaci</h2>
+            <label for="editDate" class="block text-sm font-medium text-gray-600">Vyberte datum:</label>
+            <input type="date" id="editDate" class="mt-1 p-2 border rounded-md" required>
+
+            <label for="editTime" class="block text-sm font-medium text-gray-600">Vyberte nový čas:</label>
+            <select id="editTime" class="mt-1 p-2 border rounded-md" required>
+                <!-- Možné hodiny -->
+            </select>
+
+            <button id="editBtn" class="bg-yellow-500 text-white p-2 rounded-md hover:bg-yellow-600">Upravit rezervaci</button>
+        </div>
+    </div>
+
+    <script src="reservation.js"></script>
+</body>
+</html>
